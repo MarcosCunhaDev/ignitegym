@@ -8,6 +8,8 @@ import {
 import { Loading } from "@components/Loading";
 import { NativeBaseProvider, Box } from "native-base";
 import { theme } from "src/theme";
+import { SignIn } from "@screens/SignIn";
+
 
 
 export default function App() {
@@ -23,9 +25,7 @@ export default function App() {
       ) : (
         <>
           <StatusBar style="light" backgroundColor="transparent" translucent />
-          <Box justifyContent="center" alignItems="center" flex={1}>
-            Hello world
-          </Box>
+          <SignIn />
         </>
       )}
     </NativeBaseProvider>
