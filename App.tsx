@@ -7,6 +7,8 @@ import {
 } from "@expo-google-fonts/roboto";
 import { Loading } from "@components/Loading";
 import { NativeBaseProvider, Box } from "native-base";
+import { theme } from "src/theme";
+
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -15,7 +17,7 @@ export default function App() {
   });
 
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       {!fontsLoaded ? (
         <Loading />
       ) : (
