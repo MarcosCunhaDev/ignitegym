@@ -1,10 +1,10 @@
-import { ActivityIndicator } from "react-native";
+import { Spinner, Center } from "native-base";
 import * as S from "./styles";
 
 export const Loading = () => {
   return (
-    <S.Container>
-      <ActivityIndicator />
-    </S.Container>
+    <Center flex={1} bg="pink.200">
+      <Spinner />
+    </Center>
   );
 };
