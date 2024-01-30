@@ -9,6 +9,8 @@ import { Loading } from "@components/Loading";
 import { NativeBaseProvider, Box } from "native-base";
 import { theme } from "src/theme";
 import { SignIn } from "@screens/SignIn";
+import { SignUp } from "@screens/SignUp";
+
 
 
 
@@ -25,7 +27,7 @@ export default function App() {
       ) : (
         <>
           <StatusBar style="light" backgroundColor="transparent" translucent />
-          <SignIn />
+          <SignUp />
         </>
       )}
     </NativeBaseProvider>
