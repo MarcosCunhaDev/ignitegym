@@ -5,6 +5,7 @@ import { Input } from "@components/Input";
 import { FontAwesome } from "@expo/vector-icons";
 import { useTheme } from "native-base";
 import { useState } from "react";
+import { Button } from "@components/Button";
 
 export const SignIn = () => {
   const theme = useTheme();
@@ -48,6 +49,8 @@ export const SignIn = () => {
           </Pressable>
         }
       />
+      <Button title="Acessar" />
+      <Button title="Criar conta" variant="outline" />
     </VStack>
   );
 };
