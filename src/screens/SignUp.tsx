@@ -14,10 +14,13 @@ import { FontAwesome } from "@expo/vector-icons";
 import { useTheme } from "native-base";
 import { useState } from "react";
 import { Button } from "@components/Button";
+import { AuthNavigatorRoutesProps } from "@routes/auth.routes";
+import { useNavigation } from "@react-navigation/native";
 
 export const SignUp = () => {
   const theme = useTheme();
   const [hidePassword, setHidePassword] = useState(false);
+  const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
   return (
     <ScrollView
@@ -27,6 +30,7 @@ export const SignUp = () => {
       <VStack flex={1} px={6}>
         <Image
           source={BackgroundImg}
+          defaultSource={BackgroundImg}
           alt="Training people"
           resizeMode="contain"
           position="absolute"
@@ -68,7 +72,12 @@ export const SignUp = () => {
           }
         />
         <Button title="Criar e acessar" />
-        <Button title="Voltar" variant="outline" mt="24" />
+        <Button
+          title="Voltar"
+          variant="outline"
+          mt="24"
+          onPress={() => navigation.goBack()}
+        />
       </VStack>
     </ScrollView>
   );
