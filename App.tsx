@@ -10,9 +10,8 @@ import { NativeBaseProvider, Box } from "native-base";
 import { theme } from "src/theme";
 import { SignIn } from "@screens/SignIn";
 import { SignUp } from "@screens/SignUp";
-
-
-
+import { NavigationContainer } from "@react-navigation/native";
+import { Routes } from "@routes/index";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -22,14 +21,8 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={theme}>
-      {!fontsLoaded ? (
-        <Loading />
-      ) : (
-        <>
-          <StatusBar style="light" backgroundColor="transparent" translucent />
-          <SignUp />
-        </>
-      )}
+      <StatusBar style="light" backgroundColor="transparent" translucent />
+      {!fontsLoaded ? <Loading /> : <Routes />}
     </NativeBaseProvider>
   );
 }

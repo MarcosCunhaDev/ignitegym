@@ -24,7 +24,7 @@ export const SignUp = () => {
       contentContainerStyle={{ flexGrow: 1 }}
       showsVerticalScrollIndicator={false}
     >
-      <VStack flex={1} bg="gray.700" px={6}>
+      <VStack flex={1} px={6}>
         <Image
           source={BackgroundImg}
           alt="Training people"
