@@ -1,10 +1,14 @@
-import { Center, Text } from "native-base";
+import { HomeHeader } from "@components/index";
+import { Center, Text, VStack } from "native-base";
 import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export const Home = () => {
   return (
-    <Center flex={1}>
-      <Text color={"white"}>Home</Text>
-    </Center>
+    <SafeAreaView style={{ flex: 1 }}>
+      <VStack flex={1}>
+        <HomeHeader />
+      </VStack>
+    </SafeAreaView>
   );
 };
