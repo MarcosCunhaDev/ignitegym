@@ -1,3 +1,4 @@
+import { ExerciseCard } from "@components/ExerciseCard";
 import { Group } from "@components/Group";
 import { HomeHeader } from "@components/index";
 import { Center, Text, VStack, HStack, FlatList, Heading } from "native-base";
@@ -40,7 +41,7 @@ export const Home = () => {
           }}
         />
         <VStack flex={1} px={8}>
-          <HStack justifyContent={"space-between"}>
+          <HStack justifyContent={"space-between"} mb={4}>
             <Heading color={"gray.200"} fontSize={"md"}>
               Exercícios
             </Heading>
@@ -48,6 +49,7 @@ export const Home = () => {
               4
             </Text>
           </HStack>
+          <ExerciseCard />
         </VStack>
       </VStack>
     </SafeAreaView>
