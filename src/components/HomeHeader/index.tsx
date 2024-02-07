@@ -21,7 +21,7 @@ export const HomeHeader = () => {
       />
 
       <VStack pl={4} flex={1}>
-        <Text color={"gray.100"}>Olá</Text>
+        <Text color={"gray.100"}>Olá,</Text>
         <Heading color={"gray.100"} fontSize={"md"}>
           Marcos
         </Heading>
