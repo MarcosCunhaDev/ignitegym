@@ -8,12 +8,10 @@ interface Props {
 
 export const ScreenHeader = ({ title }: Props) => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Center bg={"gray.600"} pb={6} pt={10}>
-        <Heading color="gray.200" fontSize={"xl"}>
-          {title}
-        </Heading>
-      </Center>
-    </SafeAreaView>
+    <Center bg={"gray.600"} pb={6} pt={10}>
+      <Heading color="gray.200" fontSize={"xl"}>
+        {title}
+      </Heading>
+    </Center>
   );
 };
