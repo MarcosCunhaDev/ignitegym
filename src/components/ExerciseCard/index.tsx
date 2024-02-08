@@ -4,7 +4,12 @@ import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 interface Props extends TouchableOpacityProps {}
 import { Entypo } from "@expo/vector-icons";
 
-export function ExerciseCard({ ...rest }: Props) {
+interface Props extends TouchableOpacityProps {
+  title: string;
+  description: string;
+}
+
+export function ExerciseCard({ title, description, ...rest }: Props) {
   return (
     <TouchableOpacity {...rest}>
       <HStack
@@ -26,10 +31,10 @@ export function ExerciseCard({ ...rest }: Props) {
         />
         <VStack marginLeft={4} flexShrink={1} flex={1}>
           <Heading color={"white"} fontSize={"lg"}>
-            Puxada frontal
+            {title}
           </Heading>
           <Text color={"gray.200"} fontSize={"sm"} mt={1} numberOfLines={2}>
-            3 séries x 12 repetições
+            {description}
           </Text>
         </VStack>
         <Icon as={Entypo} name="chevron-thin-right" color={"gray.300"} />

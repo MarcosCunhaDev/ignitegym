@@ -10,6 +10,14 @@ type GroupVatiations = keyof typeof defaultGroups;
 
 export const Home = () => {
   const [groups, setGroups] = useState(defaultGroups);
+  const [exercises, setExercises] = useState([
+    "Puxada",
+    "remada",
+    "Levantamento",
+    "Levantamento",
+    "Levantamento",
+    "Levantamento",
+  ]);
   const [selectedGroup, setSelectedGroup] = useState<GroupVatiations | null>(
     null
   );
@@ -49,7 +57,15 @@ export const Home = () => {
               4
             </Text>
           </HStack>
-          <ExerciseCard />
+          <FlatList
+            _contentContainerStyle={{ paddingBottom: 15 }}
+            showsVerticalScrollIndicator={false}
+            data={exercises}
+            keyExtractor={(item) => item}
+            renderItem={({ item }) => {
+              return <ExerciseCard title={item} description={item} />;
+            }}
+          />
         </VStack>
       </VStack>
     </SafeAreaView>
