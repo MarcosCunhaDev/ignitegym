@@ -1,10 +1,11 @@
-import { Center, Text } from "native-base";
+import { ScreenHeader } from "@components/index";
+import { Center, Text, VStack } from "native-base";
 import React from "react";
 
 export const History = () => {
   return (
-    <Center flex={1}>
-      <Text color={"white"}>History</Text>
-    </Center>
+    <VStack flex={1}>
+      <ScreenHeader title="Histórico de exercício" />
+    </VStack>
   );
 };
