@@ -14,9 +14,9 @@ export const Home = () => {
     "Puxada",
     "remada",
     "Levantamento",
-    "Levantamento",
-    "Levantamento",
-    "Levantamento",
+    "Levantamento1",
+    "Levantamento2",
+    "Levantamento3",
   ]);
   const [selectedGroup, setSelectedGroup] = useState<GroupVatiations | null>(
     null

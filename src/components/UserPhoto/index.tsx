@@ -8,6 +8,7 @@ interface ImgProps extends IImageProps {
 function UserPhoto({ size, ...rest }: ImgProps) {
   return (
     <Image
+      alt="User Photo"
       w={size}
       height={size}
       rounded={"full"}
